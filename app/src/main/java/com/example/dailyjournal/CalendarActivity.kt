@@ -3,12 +3,10 @@ package com.example.dailyjournal
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class RegistrationActivity : AppCompatActivity() {
-
-   // private var username:EditText? = null
+class CalendarActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registration)
+        setContentView(R.layout.activity_calendar)
     }
 }
