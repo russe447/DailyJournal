@@ -40,14 +40,13 @@
         android:id="@+id/register_button"
         android:layout_width="202dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="140dp"
         android:background="#FFFFFF"
         android:text="Register"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="430dp" />
 
     <EditText
         android:id="@+id/editText3"
