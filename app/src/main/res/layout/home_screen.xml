@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
     <EditText
         android:id="@+id/editText2"
@@ -26,7 +27,7 @@
         android:id="@+id/bottomNavigationView2"
         android:layout_width="match_parent"
         android:layout_height="68dp"
-        android:background="@color/colorNavBar"
+        android:background="@color/colorTransparent"
         app:itemHorizontalTranslationEnabled="true"
         app:itemIconSize="24dp"
         app:itemIconTint="@color/colorNavBarAccent"

@@ -1,9 +1,10 @@
 package com.example.dailyjournal
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.animation.*
+import android.view.animation.AnimationUtils
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
 class SplashScreen : AppCompatActivity() {
 
@@ -14,10 +15,21 @@ class SplashScreen : AppCompatActivity() {
 
         val anim = AnimationUtils.loadAnimation(this, R.anim.fadein)
 
-        val text = findViewById(R.id.welcome) as TextView
+        var cal = Calendar.getInstance()
+        var time = cal.get(Calendar.HOUR_OF_DAY)
+
+        val text = findViewById<TextView>(R.id.welcome)
         val name: TextView = findViewById(R.id.name)
 
-
+        if (time in 0..12) {
+            text.text = "Good Morning"
+        }
+        else if (time in 12..17) {
+            text.text = "Good Afternoon"
+        }
+        else {
+            text.text = "Good Evening"
+        }
         text.startAnimation(anim)
         name.startAnimation(anim)
     }
