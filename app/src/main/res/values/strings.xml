@@ -5,4 +5,8 @@
     <string name="username">username</string>
     <string name="password">password</string>
     <string name="create">CREATE NEW ACCOUNT</string>
+    <string name="journal">Journal</string>
+    <string name="calendar">Calendar</string>
+    <string name="stats">Stats</string>
+    <string name="settings">Settings</string>
 </resources>
