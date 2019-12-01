@@ -11,7 +11,7 @@
     <EditText
         android:id="@+id/editText2"
         android:layout_width="372dp"
-        android:layout_height="216dp"
+        android:layout_height="250dp"
         android:layout_marginStart="21dp"
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="52dp"
@@ -32,7 +32,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="29dp"
-        android:background="#1D00BCD4"
+        android:background="#0000BCD4"
         android:fontFamily="sans-serif-smallcaps"
         android:text="TextView"
         android:textAlignment="center"
@@ -48,16 +48,14 @@
         android:id="@+id/textView"
         android:layout_width="209dp"
         android:layout_height="52dp"
-        android:layout_marginBottom="13dp"
         android:fontFamily="cursive"
         android:text="Day Reflection"
         android:textAlignment="center"
         android:textColor="#020000"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteX="101dp" />
+        tools:layout_editor_absoluteY="71dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

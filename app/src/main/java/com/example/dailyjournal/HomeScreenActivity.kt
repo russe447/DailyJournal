@@ -33,7 +33,8 @@ class HomeScreenActivity : AppCompatActivity()  {
 
             when (item.itemId) {
                 R.id.journal -> {
-                    true
+                    frag = HomeScreenFragment()
+                    supportFragmentManager.beginTransaction().replace(R.id.fragment_container, frag).commit()
                 }
                 R.id.calendar -> {
                     frag = CalendarFragment()
