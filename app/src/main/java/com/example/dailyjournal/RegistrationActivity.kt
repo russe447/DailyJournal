@@ -1,35 +1,55 @@
 package com.example.dailyjournal
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 
 class RegistrationActivity : AppCompatActivity() {
 
-   // private var username:EditText? = null
+    private var passwordInput: EditText? = null
+    private var emailInput: EditText? = null
+    private var mAuth: FirebaseAuth? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
 
+        mAuth = FirebaseAuth.getInstance()
+        emailInput = findViewById<EditText>(R.id.email)
+        passwordInput = findViewById<EditText>(R.id.password)
+
         // Need to add part for person to input their name for the app to call them
 
-        val email = findViewById<EditText>(R.id.email)
-        val pass = findViewById<EditText>(R.id.password)
+        val email = emailInput!!.text.toString()
+        val pass = passwordInput!!.text.toString()
 
         val button = findViewById<Button>(R.id.register_button)
 
         button.setOnClickListener {
 
             // Also check if email is valid email
-            if (email.text.isEmpty() || pass.text.isEmpty()) {
+            if (TextUtils.isEmpty(email) || TextUtils.isEmpty(pass)) {
                 Toast.makeText(applicationContext, "Enter Valid Email/Password", Toast.LENGTH_SHORT).show()
             }
             else {
                 // Store credentials in firebase
+                mAuth!!.createUserWithEmailAndPassword(email, pass)
+                    .addOnCompleteListener {task ->
+                        if(task.isSuccessful) {
+                            Toast.makeText(applicationContext, "Success!", Toast.LENGTH_LONG).show()
 
+                            val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
+                            startActivity(intent)
+                        } else {
+                            Toast.makeText(applicationContext, "Failure!", Toast.LENGTH_LONG).show()
+                        }
+                    }
             }
         }
     }
