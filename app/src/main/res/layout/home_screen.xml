@@ -7,35 +7,23 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
+
     <EditText
         android:id="@+id/editText2"
         android:layout_width="372dp"
-        android:layout_height="216dp"
+        android:layout_height="250dp"
         android:layout_marginStart="21dp"
         android:layout_marginEnd="22dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/rounded_corners"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView2"
-        android:layout_width="match_parent"
-        android:layout_height="68dp"
-        android:background="@color/colorTransparent"
-        app:itemHorizontalTranslationEnabled="true"
-        app:itemIconSize="24dp"
-        app:itemIconTint="@color/colorNavBarAccent"
-        app:itemTextColor="@color/colorNavBarText"
-        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/date"
@@ -44,7 +32,7 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="29dp"
-        android:background="#1D00BCD4"
+        android:background="#0000BCD4"
         android:fontFamily="sans-serif-smallcaps"
         android:text="TextView"
         android:textAlignment="center"
@@ -60,19 +48,15 @@
         android:id="@+id/textView"
         android:layout_width="209dp"
         android:layout_height="52dp"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="175dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginBottom="306dp"
         android:fontFamily="cursive"
         android:text="Day Reflection"
         android:textAlignment="center"
         android:textColor="#020000"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/editText2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

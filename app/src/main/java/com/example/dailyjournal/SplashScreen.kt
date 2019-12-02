@@ -1,6 +1,8 @@
 package com.example.dailyjournal
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +16,22 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         val anim = AnimationUtils.loadAnimation(this, R.anim.fadein)
+
+        anim.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationRepeat(animation: Animation?) {
+
+            }
+
+            override fun onAnimationEnd(animation: Animation?) {
+                val intent = Intent(this@SplashScreen, HomeScreenActivity::class.java)
+                startActivity(intent)
+            }
+
+            override fun onAnimationStart(animation: Animation?) {
+
+            }
+
+        })
 
         var cal = Calendar.getInstance()
         var time = cal.get(Calendar.HOUR_OF_DAY)
@@ -32,5 +50,7 @@ class SplashScreen : AppCompatActivity() {
         }
         text.startAnimation(anim)
         name.startAnimation(anim)
+
+
     }
 }
