@@ -12,6 +12,9 @@
         <activity android:name=".SplashScreen"></activity>
         <activity android:name=".CalendarActivity" />
         <activity android:name=".RegistrationActivity" />
+        <activity android:name=".AddTextEntryActivity" />
+        <activity android:name=".AddEventActivity" />
+        <activity android:name=".AddImageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
