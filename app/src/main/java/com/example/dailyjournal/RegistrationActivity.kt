@@ -1,16 +1,18 @@
 package com.example.dailyjournal
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
-import com.google.firebase.auth.FirebaseAuth
 import android.widget.ProgressBar
-import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthException
+
 
 class RegistrationActivity : AppCompatActivity() {
 
@@ -38,7 +40,6 @@ class RegistrationActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             progressBar!!.visibility = View.VISIBLE
-            Log.i("testing", "It breaks here")
             val email = emailInput!!.text.toString()
             val pass = passwordInput!!.text.toString()
 
@@ -52,10 +53,13 @@ class RegistrationActivity : AppCompatActivity() {
                     .addOnCompleteListener {task ->
                         if(task.isSuccessful) {
                             Toast.makeText(applicationContext, "Success!", Toast.LENGTH_LONG).show()
+                            progressBar!!.visibility = View.GONE
 
-                            val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
+                            val intent = Intent(this@RegistrationActivity, MainActivity::class.java)
                             startActivity(intent)
                         } else {
+                            val e = task.exception as FirebaseAuthException?
+                            Log.e("LoginActivity", "Failed Registration", e);
                             Toast.makeText(applicationContext, "Failure!", Toast.LENGTH_LONG).show()
                         }
                     }
