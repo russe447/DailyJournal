@@ -23,5 +23,8 @@ class CalendarFragment : Fragment() {
             textView2?.text = String.format("On %d/%d/%d", month, dayOfMonth, year)
             dayEntry?.text = "This is where the journal entry would be placed"
         }
+        textView2.setOnClickListener {
+
+        }
     }
 }
