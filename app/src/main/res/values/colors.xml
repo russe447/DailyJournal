@@ -4,7 +4,7 @@
     <color name="colorTransparent">#00FFFF</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colorNavBar">#FBD85A</color>
+    <color name="colorNavBar">#FCEA87</color>
     <color name="colorNavBarAccent">#FFFFFF</color>
     <color name="colorNavBarText">#000000</color>
 </resources>
