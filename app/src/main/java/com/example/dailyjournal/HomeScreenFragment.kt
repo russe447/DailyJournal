@@ -57,6 +57,6 @@ class HomeScreenFragment : Fragment() {
         val today = Calendar.getInstance().getTime()
         val formatter = SimpleDateFormat("MMM dd, yyyy")
         val finalDate = formatter.format(today)
-        view.setText(finalDate)
+        view.text = finalDate
     }
 }
