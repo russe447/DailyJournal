@@ -2,29 +2,23 @@ package com.example.dailyjournal
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class AddEventActivity : AppCompatActivity() {
 
+    private var eventSaveBtn: Button? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_text_entry)
+        setContentView(R.layout.event_form)
 
-        imageUpload()
+        eventSaveBtn = findViewById<Button>(R.id.eventSave)
+
+        eventSaveBtn!!.setOnClickListener {
+            //TODO: Link to calendar activity and firebase
+            val eventIntent = Intent(this@AddEventActivity, HomeScreenActivity::class.java)
+            startActivity(eventIntent)
+        }
     }
-
-    private fun imageUpload() {
-
-        val imageIntent = Intent(Intent.ACTION_PICK)
-        imageIntent.type = "image/*"
-        startActivityForResult(Intent.createChooser(imageIntent, "Choose Picture"), PICK_IMAGE_REQUEST)
-
-    }
-
-    companion object {
-        private val PICK_IMAGE_REQUEST = 1000;
-    }
-
-
-
 }
