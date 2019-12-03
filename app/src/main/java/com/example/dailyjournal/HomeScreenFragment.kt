@@ -24,7 +24,7 @@ class HomeScreenFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         viewOfLayout = inflater.inflate(R.layout.home_screen, container, false)
-        addTextButton = viewOfLayout.findViewById<Button>(R.id.addText)
+        // addTextButton = viewOfLayout.findViewById<Button>(R.id.addText)
         addImageButton = viewOfLayout.findViewById<Button>(R.id.addImage)
         addEventButton = viewOfLayout.findViewById<Button>(R.id.addEvent)
 
@@ -57,6 +57,6 @@ class HomeScreenFragment : Fragment() {
         val today = Calendar.getInstance().getTime()
         val formatter = SimpleDateFormat("MMM dd, yyyy")
         val finalDate = formatter.format(today)
-        view.setText(finalDate)
+        view.text = finalDate
     }
 }

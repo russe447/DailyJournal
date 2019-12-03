@@ -45,6 +45,7 @@ class RegistrationActivity : AppCompatActivity() {
             // Also check if email is valid email
             if (TextUtils.isEmpty(email) || TextUtils.isEmpty(pass)) {
                 Toast.makeText(applicationContext, "Enter Valid Email/Password", Toast.LENGTH_SHORT).show()
+                progressBar!!.visibility = View.GONE
             }
             else {
                 // Store credentials in firebase
@@ -52,11 +53,12 @@ class RegistrationActivity : AppCompatActivity() {
                     .addOnCompleteListener {task ->
                         if(task.isSuccessful) {
                             Toast.makeText(applicationContext, "Success!", Toast.LENGTH_LONG).show()
-
+                            progressBar!!.visibility = View.GONE
                             val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
                             startActivity(intent)
                         } else {
                             Toast.makeText(applicationContext, "Failure!", Toast.LENGTH_LONG).show()
+                            progressBar!!.visibility = View.GONE
                         }
                     }
             }
