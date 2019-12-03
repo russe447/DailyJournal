@@ -15,7 +15,7 @@
         <activity android:name=".AddTextEntryActivity" />
         <activity android:name=".AddEventActivity" />
         <activity android:name=".AddImageActivity" />
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
