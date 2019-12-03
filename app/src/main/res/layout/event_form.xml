@@ -5,7 +5,8 @@
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/textView3"
@@ -14,8 +15,9 @@
         android:layout_marginStart="85dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="84dp"
-        android:background="#37F3F1F1"
+        android:background="#00F3F1F1"
         android:text="Add New Event"
+        android:textColor="#D8F8F2F2"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
