@@ -21,13 +21,13 @@
         android:textAlignment="center"
         android:textColor="#020000"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/dayEntry"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
-    <EditText
-        android:id="@+id/editText"
+    <TextView
+        android:id="@+id/dayEntry"
         android:layout_width="348dp"
         android:layout_height="275dp"
         android:layout_marginStart="31dp"
