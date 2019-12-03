@@ -55,7 +55,7 @@ class RegistrationActivity : AppCompatActivity() {
                             Toast.makeText(applicationContext, "Success!", Toast.LENGTH_LONG).show()
                             progressBar!!.visibility = View.GONE
 
-                            val intent = Intent(this@RegistrationActivity, LoginActivity::class.java)
+                            val intent = Intent(this@RegistrationActivity, MainActivity::class.java)
                             startActivity(intent)
                         } else {
                             val e = task.exception as FirebaseAuthException?
