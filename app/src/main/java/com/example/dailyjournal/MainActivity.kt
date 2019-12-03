@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         loginBtn!!.setOnClickListener {
-            val intent = Intent(this@MainActivity, SplashScreen::class.java)
+            val intent = Intent(this@MainActivity, LoginActivity::class.java)
             startActivity(intent)
         }
     }
