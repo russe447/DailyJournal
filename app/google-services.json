@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "91544936141",
+    "firebase_url": "https://daily-journal-5ef9c.firebaseio.com",
+    "project_id": "daily-journal-5ef9c",
+    "storage_bucket": "daily-journal-5ef9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91544936141:android:78be9804fbe70a16be9384",
+        "android_client_info": {
+          "package_name": "com.example.dailyjournal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91544936141-vteq7m590sbeomnsdvrqqdog05rrf3ma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dailyjournal",
+            "certificate_hash": "4645c79210948a2490b132bf9c62942482f04a93"
+          }
+        },
+        {
+          "client_id": "91544936141-v6b4gqls1vsojq79qn3p08o33kk7eclt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYKc9kPt2zD1jrXQ9bPDrmXxtPIe36T6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91544936141-v6b4gqls1vsojq79qn3p08o33kk7eclt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
