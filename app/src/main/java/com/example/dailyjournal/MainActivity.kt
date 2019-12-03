@@ -17,13 +17,13 @@ class MainActivity : AppCompatActivity() {
 
 
         registerBtn!!.setOnClickListener {
-            val intent = Intent(this@MainActivity, RegistrationActivity::class.java)
+            val intent = Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
         }
 
         //Temporary Access to Home Screen
         loginBtn!!.setOnClickListener {
-            val intent = Intent(this@MainActivity, HomeScreenActivity::class.java)
+            val intent = Intent(this, HomeScreenActivity::class.java)
             startActivity(intent) }
 
     }

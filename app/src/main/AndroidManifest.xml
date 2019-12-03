@@ -15,14 +15,14 @@
         <activity android:name=".AddTextEntryActivity" />
         <activity android:name=".AddEventActivity" />
         <activity android:name=".AddImageActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".HomeScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
