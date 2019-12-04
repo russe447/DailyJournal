@@ -8,9 +8,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import android.widget.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.text.SimpleDateFormat
 import java.util.*
@@ -18,7 +16,6 @@ import java.util.*
 class HomeScreenFragment : Fragment() {
 
     private lateinit var viewOfLayout : View
-
     private var addImageButton: Button? = null
     private var addEventButton: Button? = null
     private var saveEntryButton: Button? = null
@@ -33,7 +30,6 @@ class HomeScreenFragment : Fragment() {
         addEventButton = viewOfLayout.findViewById<Button>(R.id.addEvent)
         writtenEntry = viewOfLayout.findViewById<EditText>(R.id.editText)
 
-
         addImageButton!!.setOnClickListener {
             val imgIntent = Intent(activity, AddImageActivity::class.java)
             startActivity(imgIntent)
@@ -47,9 +43,7 @@ class HomeScreenFragment : Fragment() {
         }
 
         saveEntryButton!!.setOnClickListener {
-            val entryIntent = Intent(activity, AddTextEntryActivity::class.java)
-            entryIntent.putExtra("JOURNAL_ENTRY_TEXT", writtenEntry!!.text.toString())
-            startActivity(entryIntent)
+         
         }
 
         return viewOfLayout
