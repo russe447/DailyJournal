@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
     private var email: EditText? = null
     private var password: EditText? = null
     private var loginButton: Button? = null
+    private var registerButton: Button? = null
     private var mAuth: FirebaseAuth? = null
     private var progressBar: ProgressBar? = null
 
@@ -31,12 +32,22 @@ class LoginActivity : AppCompatActivity() {
         mDatabaseReference = mDatabase!!.reference!!.child("User Information")
         mAuth = FirebaseAuth.getInstance()
 
-        email = findViewById(R.id.email)
+        email = findViewById(R.id.username)
         password = findViewById(R.id.password)
         loginButton = findViewById(R.id.login_button)
+        registerButton = findViewById(R.id.register_button)
         progressBar = findViewById(R.id.progressBar)
 
-        loginButton!!.setOnClickListener { accountLogin() }
+        //loginButton!!.setOnClickListener { accountLogin() }
+        loginButton!!.setOnClickListener{
+            val newIntent = Intent(this, SplashScreen::class.java)
+            //newIntent.putExtra(, mAuth?.)
+            startActivity(newIntent)
+        }
+
+        registerButton!!.setOnClickListener{
+            val intent = Intent(this, RegistrationActivity::class.java)
+            startActivity(intent)}
     }
 
     private fun accountLogin() {
