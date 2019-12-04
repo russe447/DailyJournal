@@ -1,6 +1,7 @@
 package com.example.dailyjournal
 
 import android.content.Intent
+import android.content.Intent.getIntent
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,7 +17,7 @@ import java.util.*
 class HomeScreenFragment : Fragment() {
 
     private lateinit var viewOfLayout : View
-    private var addTextButton: Button? = null
+
     private var addImageButton: Button? = null
     private var addEventButton: Button? = null
 
@@ -28,10 +29,6 @@ class HomeScreenFragment : Fragment() {
         addImageButton = viewOfLayout.findViewById<Button>(R.id.addImage)
         addEventButton = viewOfLayout.findViewById<Button>(R.id.addEvent)
 
-        addTextButton!!.setOnClickListener {
-            val intent = Intent(activity, AddTextEntryActivity::class.java)
-            startActivity(intent)
-        }
 
         addImageButton!!.setOnClickListener {
             val imgIntent = Intent(activity, AddImageActivity::class.java)
@@ -40,7 +37,9 @@ class HomeScreenFragment : Fragment() {
 
         addEventButton!!.setOnClickListener {
             val calIntent = Intent(activity, AddEventActivity::class.java)
-            startActivity(calIntent)
+            startActivityForResult(calIntent, 1)
+            //var event = calIntent.getSerializableExtra("event") as Event
+
         }
 
         return viewOfLayout
@@ -58,5 +57,14 @@ class HomeScreenFragment : Fragment() {
         val formatter = SimpleDateFormat("MMM dd, yyyy")
         val finalDate = formatter.format(today)
         view.text = finalDate
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        // Coming from the AddEventActivity
+        if (requestCode == 1) {
+            var event = data?.getSerializableExtra("event")
+        }
     }
 }

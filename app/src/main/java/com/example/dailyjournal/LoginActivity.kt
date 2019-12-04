@@ -20,6 +20,7 @@ class LoginActivity : AppCompatActivity() {
     private var email: EditText? = null
     private var password: EditText? = null
     private var loginButton: Button? = null
+    private var registerBtn: Button? = null
     private var mAuth: FirebaseAuth? = null
     private var progressBar: ProgressBar? = null
 
@@ -34,9 +35,17 @@ class LoginActivity : AppCompatActivity() {
         email = findViewById(R.id.email)
         password = findViewById(R.id.password)
         loginButton = findViewById(R.id.login_button)
+        registerBtn = findViewById(R.id.register_button)
         progressBar = findViewById(R.id.progressBar)
 
-        loginButton!!.setOnClickListener { accountLogin() }
+        loginButton!!.setOnClickListener {
+            accountLogin()
+
+            }
+        registerBtn!!.setOnClickListener {
+            val intent = Intent(this, RegistrationActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun accountLogin() {
@@ -54,7 +63,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         mAuth!!.signInWithEmailAndPassword(email?.text.toString(), password?.text.toString())
-            .addOnCompleteListener {task ->
+            .addOnCompleteListener(this) {task ->
                 if(task.isSuccessful) {
                     Toast.makeText(applicationContext, "Successful!", Toast.LENGTH_LONG).show()
                     progressBar!!.visibility = View.GONE

@@ -1,8 +1,9 @@
 package com.example.dailyjournal
 
+import java.io.Serializable
 import java.util.*
 
-class Event {
+class Event : Serializable {
 
     var title : String = ""
     var location : String = ""
