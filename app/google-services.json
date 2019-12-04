@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "91544936141-1qlhctj97h62sicp5bjk9vsgv3j1pctu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dailyjournal",
+            "certificate_hash": "125c0010dec3d88024b72b29ef3a01046591f0d6"
+          }
+        },
+        {
           "client_id": "91544936141-vteq7m590sbeomnsdvrqqdog05rrf3ma.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
