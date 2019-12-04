@@ -23,7 +23,6 @@ class AddEventActivity : AppCompatActivity() {
         eventSaveBtn = findViewById<Button>(R.id.eventSave)
 
         eventSaveBtn!!.setOnClickListener {
-            //TODO: Link to calendar activity and firebase
             val name = findViewById(R.id.name) as EditText
             val location = findViewById(R.id.location) as EditText
             val date = findViewById(R.id.date) as EditText
@@ -37,9 +36,6 @@ class AddEventActivity : AppCompatActivity() {
             event.date = date.text.toString()
             event.startTime = start.text.toString()
             event.endTime = end.text.toString()
-
-           // mDatabase = FirebaseDatabase.getInstance()
-           // mDatabaseReference = mDatabase!!.reference!!.child("User Information")
 
             val eventIntent = Intent()
             setResult(Activity.RESULT_OK, eventIntent)
