@@ -29,10 +29,10 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mDatabase = FirebaseDatabase.getInstance()
-        mDatabaseReference = mDatabase!!.reference!!.child("User Information")
+        mDatabaseReference = mDatabase!!.reference!!.child("Users")
         mAuth = FirebaseAuth.getInstance()
 
-        email = findViewById(R.id.email)
+        email = findViewById(R.id.username)
         password = findViewById(R.id.password)
         loginButton = findViewById(R.id.login_button)
         registerBtn = findViewById(R.id.register_button)
